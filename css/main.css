@@ -1,0 +1,96 @@
+*, *::before, *::after {
+    outline: none !important;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    margin: 0;
+    background-color: #19323c;
+    color: #fff;
+}
+.rel {
+  position: relative !important;
+}
+.container {
+    display: block;
+    width: 100%;
+    max-width: 1310px;
+    padding: 0 25px;
+    margin: 0 auto;
+}
+.flex-box {
+    display: flex;
+    height: 100%;
+}
+.flex-center {
+    align-self: center;
+}
+.justify-between {
+    justify-content: space-between;
+}
+.text-center {
+  text-align: center !important;
+}
+.marg-bottom {
+  margin-bottom: 180px !important;
+}
+.marg-bottom-sm {
+  margin-bottom: 42px !important;
+}
+.marg-bottom-sub {
+  margin-bottom: 64px !important;
+}
+.marg-bottom-sub-x2 {
+  margin-bottom: 128px !important;
+}
+.sidebar-img {
+    margin-top: 100px;
+}
+.sidebar-img img {
+    margin: 0 auto;
+    width: 100%;
+    max-width: 320px;
+    padding: 20px;
+    display: block;
+}
+.mainbar-contant {
+    width: 100%;
+    max-width: 680px;
+    margin: 0 auto;
+    padding: 20px;
+}
+.album-songs {
+    margin: 40px 0;
+}
+.song {
+    margin-bottom: 50px;
+}
+.song h2 {
+  color: #fabc2a;
+}
+.song a {
+    color: #fff;
+    text-decoration: none;
+    background-color: #d53332;
+    border-radius: 3px;
+    width: 100%;
+    max-width: 240px;
+    font-weight: 500;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.song a svg {
+    width: 25px;
+    height: 25px;
+    fill: #fff;
+    margin-right: 15px;
+}
