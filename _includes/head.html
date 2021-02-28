@@ -1,10 +1,11 @@
-
 <meta charset="utf-8">
+<script async src="https://cdn.ampproject.org/v0.js"></script>
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
 <meta name="description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="theme-color" content="#d53332">
+<link rel="canonical" href="{{ site.url }}{{page.url}}">
 
 <!-- Facebook Meta Tags -->
 <meta property="og:url" content="{{ site.url }}{{page.url}}">
@@ -23,12 +24,21 @@
 <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 
 <!-- CSS -->
-<link rel="stylesheet" href="/css/main.css" />
 <link rel="preconnect" href="https://fonts.gstatic.com">
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=El+Messiri:wght@700&display=swap" rel="stylesheet">
+<style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+<style amp-custom>
+  {% include main_css.html %}
+</style>
 
-<!-- Js 
-<meta name="propeller" content="9b240441639dcfc31738d3cda3b636ab">
-<script>(function(s,u,z,p){s.src=u,s.setAttribute('data-zone',z),p.appendChild(s);})(document.createElement('script'),'https://iclickcdn.com/tag.min.js',3963169,document.body||document.documentElement)</script>
--->
+<!-- Js -->
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org/",
+  "@type": "MusicAlbum",
+  "name": "{% if page.album_name %}{{ page.album_name }}{% else %}mulashwini album{% endif %}",
+  "image": "{% if page.metaimg %}{{ page.metaimg }}{% else %}{{ site.url }}/favicon.png{% endif %}",
+  "url": "{{ site.url }}{{page.url}}"
+}
+</script>
