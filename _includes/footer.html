@@ -1,10 +1,16 @@
-<amp-analytics type="gtag" data-credentials="include">
+<amp-analytics type="googleanalytics">
 <script type="application/json">
 {
-  "vars" : {
-    "gtag_id": "UA-98602094-1",
-    "config" : {
-      "UA-98602094-1": { "groups": "default" }
+  "vars": {
+    "account": "UA-98602094-1"
+  },
+  "triggers": {
+    "default pageview": {
+      "on": "visible",
+      "request": "pageview",
+      "vars": {
+        "title": "{% if page.album_name %}{{ page.album_name }}{% else %}mulashwini album{% endif %}"
+      }
     }
   }
 }
