@@ -215,6 +215,44 @@ amp-youtube {
     margin-bottom: 8px;
     cursor: pointer;
 }
+.searchbox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 12px;
+}
+.search-form-inner {
+    width: 100%;
+    display: flex;
+    position: relative;
+}
+input[type="search"] {
+    width: 100%;
+    border: 3px solid #d53332;
+    border-right: none;
+    padding: 5px;
+    height: 36px;
+    border-radius: 5px 0 0 5px;
+    outline: none;
+    color: #020202;
+    font-family: 'Montserrat', sans-serif;
+}
+button.searchButton {
+    width: 40px;
+    height: 36px;
+    border: 1px solid #d53332;
+    background: #d53332;
+    text-align: center;
+    color: #fff;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+    font-size: 20px;
+}
+button.searchButton svg {
+    fill: #fff;
+    height: 20px;
+    width: 20px;
+}
 @media (max-width: 739px) {
   .song {
     text-align: center;
